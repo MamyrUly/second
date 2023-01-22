@@ -1,0 +1,21 @@
+{% extends "haha/layout.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>bla bla {{ title }}</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deleniti doloribus officia officiis quam quasi rerum tempore ut voluptates voluptatibus.</p>
+        <button class="btn btn-warning"><a href="{% url 'about' %}">To page about us</a></button>
+        {% for el in values %}
+        {% if el == 'Wow' %}
+             <p>{{ el }}</p>
+        {% endif %}
+        {% endfor %}
+
+        {% for el in obj %}
+         <p>{{ el }}</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}

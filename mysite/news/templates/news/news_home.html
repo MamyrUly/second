@@ -1,0 +1,22 @@
+{% extends "haha/layout.html" %}
+
+{% block title %}today's news{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Today news </h1>
+        <br>
+        {% if news %}
+        {% for el in news %}
+        <div class="alert alert-warning" >
+            <h2> {{ el.title }} </h2>
+            <h5> {{ el.anons }} </h5>
+            <p>{{el.full_text}} </p>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p> no news for today</p>
+        {% endif %}
+    </div>
+
+{% endblock %}
